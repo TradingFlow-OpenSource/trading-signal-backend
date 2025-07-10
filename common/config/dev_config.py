@@ -16,7 +16,7 @@ class DevelopmentConfig:
         'port': config_data['MYSQL_CONFIG']['port'],
         'user': config_data['MYSQL_CONFIG']['user'],
         'password': config_data['MYSQL_CONFIG']['password'],
-        'database': 'quantitative_trading',
+        'database': 'trading_signal',
         'pool_size': 1000,
         'max_overflow': 10,
         'pool_timeout': 300,
@@ -32,29 +32,5 @@ class DevelopmentConfig:
         'timeout': 20,  # 连接超时时间（秒）
         'decode_responses': True  # 自动解码响应
     }
-
-    # 币安 API 配置
-    BINANCE = {
-        'api_key': config_data['BINANCE']['api_key'],
-        'api_secret': config_data['BINANCE']['api_secret'],
-        'testnet': True  # 是否使用测试网络
-    }
-
-    BITGET = {
-        'api_key': config_data['BITGET']['api_key'],
-        'api_secret': config_data['BITGET']['api_secret'],
-        'password': config_data['BITGET']['password'],
-        'testnet': True  # 是否使用测试网络
-    }
-
-    EMAIL_CONFIG = {
-        "MAIL_SUPPORT_HOST": "smtp.qq.com",  # 邮箱服务器地址
-        "SUPPORT_SENDER": "feixiong97@foxmail.com",  # 邮件发送方邮箱地址
-        "MAIL_SUPPORT_USER": "feixiong97@foxmail.com",  # 用户名
-        "MAIL_SUPPORT_PASS": config_data['EMAIL_CONFIG']['MAIL_SUPPORT_PASS'],  # 邮箱密码
-        "RECEIVERS": ["qingyunfengli@foxmail.com"],  # 邮箱密码
-    }
-
-    SECRET_KEY = config_data['SECRET_KEY']
 
 

@@ -14,33 +14,11 @@ class ProductionConfig:
         'port': config_data['MYSQL_CONFIG']['port'],
         'user': config_data['MYSQL_CONFIG']['user'],
         'password': config_data['MYSQL_CONFIG']['password'],
-        'database': 'quantitative_trading',  # 数据库
+        'database': 'trading_signal',  # 数据库
         'pool_size': 1000,  # 连接池大小
         'max_overflow': 10,  # 超过连接池大小外最多创建的连接数
         'pool_timeout': 30,  # 池中没有连接时等待的秒数
         'pool_recycle': 3600,  # 连接回收时间（秒）
-    }
-
-    # 币安 API 配置
-    BINANCE = {
-        'api_key': config_data['BINANCE']['api_key'],
-        'api_secret': config_data['BINANCE']['api_secret'],
-        'testnet': False  # 是否使用测试网络
-    }
-
-    BITGET = {
-        'api_key': config_data['BITGET']['api_key'],
-        'api_secret': config_data['BITGET']['api_secret'],
-        'password': config_data['BITGET']['password'],
-        'testnet': False  # 是否使用测试网络
-    }
-
-    EMAIL_CONFIG = {
-        "MAIL_SUPPORT_HOST": "smtp.qq.com",  # 邮箱服务器地址
-        "SUPPORT_SENDER": "feixiong97@foxmail.com",  # 邮件发送方邮箱地址
-        "MAIL_SUPPORT_USER": "feixiong97@foxmail.com",  # 用户名
-        "MAIL_SUPPORT_PASS": config_data['EMAIL_CONFIG']['MAIL_SUPPORT_PASS'],  # 邮箱密码
-        "RECEIVERS": ["qingyunfengli@foxmail.com"],  # 邮箱密码
     }
 
 

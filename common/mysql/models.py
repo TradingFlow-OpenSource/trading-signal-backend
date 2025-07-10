@@ -5,6 +5,8 @@ from common.mysql.connection import Base
 
 # 订阅记录
 class Subscribe(Base):
+    __tablename__ = "subscribe"
+
     id = Column(Integer, primary_key=True, index=True)
     create_time = Column(DateTime, default=datetime.now)
     update_time = Column(DateTime)
